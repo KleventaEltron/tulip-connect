@@ -68,6 +68,7 @@ void initComplete(void)
 // *****************************************************************************
 
 // Voorbeeld comment boven main
+// Extra voorbeeld regel voor branches
 int main ( void )
 {
     /* Initialize all modules */
