@@ -1,0 +1,57 @@
+# MPLAB X build directories
+tulip_connect.X/nbproject/private/
+tulip_connect.X/nbproject/Makefile-*
+tulip_connect.X/nbproject/Package-*
+
+tulip_connect.X/dist/
+tulip_connect.X/debug/
+tulip_connect.X/queuelogs/
+tulip_connect.X/build/
+tulip_connect.X/.generated_files/flags/default/
+tulip_connect.X/.generated_files/flags/debug/
+
+src/files/credentials.h
+
+# Build artifacts
+*.elf
+*.hex
+*.cof
+*.map
+*.o
+*.d
+*.s
+*.lst
+*.gld
+*.a
+*.S
+
+# Debugging files
+*.dSYM/
+*.pdb
+*.log
+
+# MPLABX auto-generated files
+*.dep
+*.iobj
+*.o.d
+*.lst
+*.ps
+*.err
+*.idb
+*.map
+*.sym
+*.asm
+
+# Temporary files
+*.bak
+*.swp
+*.swo
+*.tmp
+*.cache
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
