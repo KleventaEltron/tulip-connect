@@ -21,9 +21,6 @@
 #define LOGGING_TIMEOUT_MS 200000
 #define TCPIP_STACK_INDEX_0 0
 
-//int stackResetCount = 0;
-//int TcpIPStackResetCount = 0;  
-
 APP_LOGGING_TASKS_DATA app_logging_tasksData;
 
 TCPIP_NET_HANDLE        netH;
@@ -164,7 +161,6 @@ void APP_LOGGING_TASKS_Tasks ( void )
         case APP_LOGGING_TASKS_PARSE_STRING_TO_IP:
         {
             TCPIP_DNS_RESULT result;
-            //SYS_CONSOLE_PRINT("Using DNS to Resolve '%s'\r\n", HOST);
             result = TCPIP_DNS_Resolve(HOST, TCPIP_DNS_TYPE_A);
                 
             SYS_ASSERT(result != TCPIP_DNS_RES_NAME_IS_IPADDRESS, "DNS Result is TCPIP_DNS_RES_NAME_IS_IPADDRESS, which should not happen since we already checked");
@@ -172,7 +168,6 @@ void APP_LOGGING_TASKS_Tasks ( void )
                 app_logging_tasksData.state = APP_LOGGING_TASKS_WAIT_ON_DNS;
             } else {
                 SYS_CONSOLE_PRINT("DNS Query returned %d Aborting\r\n", result);
-                //while(!releaseLoggingLock());
                 app_logging_tasksData.state = APP_LOGGING_TASKS_IDLE;
             }
             break;
